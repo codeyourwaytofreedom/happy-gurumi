@@ -25,7 +25,7 @@ export function ToyCard({ toy }: ToyCardProps) {
             src={toy.image}
             alt={toy.alt}
             className={styles.toyImage}
-            sizes="(max-width: 640px) 46vw, (max-width: 1040px) 30vw, 240px"
+            sizes="(max-width: 560px) calc((100vw - 44px) / 2), (max-width: 860px) calc((100vw - 76px) / 3), (max-width: 1040px) calc((100vw - 116px) / 3), 240px"
           />
         </div>
       </Link>

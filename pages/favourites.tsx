@@ -54,7 +54,7 @@ export default function FavouritesPage() {
               alt=""
               className={styles.favouritesHeroImage}
               priority
-              sizes="(max-width: 860px) 92vw, 650px"
+              sizes="(max-width: 560px) 240px, (max-width: 860px) 92vw, 650px"
             />
           </div>
         </section>
@@ -90,7 +90,7 @@ export default function FavouritesPage() {
                         src={toy.image}
                         alt={toy.alt}
                         className={styles.favouriteImage}
-                        sizes="(max-width: 640px) 90vw, (max-width: 1040px) 42vw, 340px"
+                        sizes="(max-width: 560px) calc(100vw - 32px), (max-width: 1040px) calc((100vw - 74px) / 2), 360px"
                       />
                     </span>
                   </Link>

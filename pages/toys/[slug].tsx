@@ -74,7 +74,12 @@ export default function ToyDetailPage({ slug }: ToyDetailPageProps) {
                     key={item}
                     aria-label={`View ${toy.name} image ${item + 1}`}
                   >
-                    <Image src={toy.image} alt="" className={styles.detailThumbImage} />
+                    <Image
+                      src={toy.image}
+                      alt=""
+                      className={styles.detailThumbImage}
+                      sizes="(max-width: 560px) calc((100vw - 74px) / 4), 112px"
+                    />
                   </button>
                 ))}
               </div>

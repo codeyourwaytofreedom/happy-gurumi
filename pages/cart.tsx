@@ -72,7 +72,7 @@ export default function CartPage() {
               alt="Basket filled with crocheted toys"
               className={styles.cartHeroImage}
               priority
-              sizes="(max-width: 860px) 92vw, 650px"
+              sizes="(max-width: 560px) 220px, (max-width: 860px) 92vw, 650px"
             />
           </div>
         </section>
@@ -115,7 +115,7 @@ export default function CartPage() {
                           src={item.toy.image}
                           alt={item.toy.alt}
                           className={styles.cartProductImage}
-                          sizes="112px"
+                          sizes="(max-width: 560px) 82px, 96px"
                         />
                       </span>
                       <span>

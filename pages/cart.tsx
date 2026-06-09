@@ -75,12 +75,14 @@ export default function CartPage() {
           aria-label="Shopping cart"
         >
           <div className={styles.cartItemsPanel}>
-            <div className={styles.cartTableHeader} aria-hidden="true">
-              <span>Product</span>
-              <span>Price</span>
-              <span>Quantity</span>
-              <span>Total</span>
-            </div>
+            {cartItems.length > 0 ? (
+              <div className={styles.cartTableHeader} aria-hidden="true">
+                <span>Product</span>
+                <span>Price</span>
+                <span>Quantity</span>
+                <span>Total</span>
+              </div>
+            ) : null}
             {cartItems.length > 0 ? (
               cartItems.map((item) => {
                 const price = getPriceValue(item.toy.price);
@@ -148,7 +150,7 @@ export default function CartPage() {
               <div className={styles.emptyCart}>
                 <p>Your cart is empty for now.</p>
                 <Link className={styles.continueShoppingButton} href="/toys">
-                  ← Continue Shopping
+                  ↩ Continue Shopping
                 </Link>
               </div>
             )}
@@ -167,7 +169,7 @@ export default function CartPage() {
                 <strong>{formatPrice(shipping)}</strong>
               </div>
               <div className={styles.summaryTotal}>
-                <span>Estimated Total</span>
+                <span>Order Total</span>
                 <strong>{formatPrice(total)}</strong>
               </div>
               <div className={styles.shippingProgress}>
@@ -183,9 +185,7 @@ export default function CartPage() {
               <button className={styles.checkoutButton} type="button">
                 🛍 Proceed to Checkout
               </button>
-              <p className={styles.secureCheckout}>♢ Secure checkout</p>
               <div className={styles.paymentBox}>
-                <strong>We Accept</strong>
                 <div aria-label="Accepted payment methods">
                   <span>VISA</span>
                   <span>MC</span>
@@ -201,7 +201,7 @@ export default function CartPage() {
         {cartItems.length > 0 ? (
           <div className={styles.cartActions}>
             <Link className={styles.continueShoppingButton} href="/toys">
-              ← Continue Shopping
+              ↩ Continue Shopping
             </Link>
           </div>
         ) : null}

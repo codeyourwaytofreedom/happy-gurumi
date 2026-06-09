@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# project assets
+/assets/mockups/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

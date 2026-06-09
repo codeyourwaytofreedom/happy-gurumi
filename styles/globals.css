@@ -23,10 +23,22 @@ body {
   min-height: 100%;
 }
 
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 body {
   color: var(--color-chocolate);
   background: var(--color-cream);
   font-family: var(--font-sans);
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
 * {

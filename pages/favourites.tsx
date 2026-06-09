@@ -8,29 +8,6 @@ import { getToyBySlug } from "@/data/toys";
 import { useFavourites } from "@/hooks/useFavourites";
 import styles from "@/styles/Home.module.css";
 
-const valueItems = [
-  {
-    title: "Handmade With Love",
-    text: "Each piece is crafted with care and love.",
-    icon: "♡",
-  },
-  {
-    title: "Premium Yarn Materials",
-    text: "We use soft, durable, and baby-friendly yarn.",
-    icon: "◌",
-  },
-  {
-    title: "Perfect Gift For Any Occasion",
-    text: "Beautifully packaged and ready to gift.",
-    icon: "🎁",
-  },
-  {
-    title: "Safe for All Ages",
-    text: "Made with safety in mind for your peace of mind.",
-    icon: "♢",
-  },
-];
-
 export default function FavouritesPage() {
   const { favourites, toggleFavourite } = useFavourites();
   const favouriteToys = favourites
@@ -150,19 +127,6 @@ export default function FavouritesPage() {
           )}
         </section>
 
-        <section className={styles.valuesStrip} aria-label="HappyGurumi values">
-          {valueItems.map((item) => (
-            <article className={styles.valueItem} key={item.title}>
-              <span className={styles.valueIcon} aria-hidden="true">
-                {item.icon}
-              </span>
-              <div>
-                <h2 className={styles.valueTitle}>{item.title}</h2>
-                <p className={styles.valueText}>{item.text}</p>
-              </div>
-            </article>
-          ))}
-        </section>
         <BottomBanner />
       </main>
     </>

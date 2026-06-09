@@ -2160,7 +2160,13 @@
   }
 
   .cartHeroImageWrap {
-    min-height: 140px;
+    height: 200px;
+    min-height: 0;
+    max-height: 200px;
+  }
+
+  .cartHeroImage {
+    max-height: 200px;
   }
 
   .cartCopy {

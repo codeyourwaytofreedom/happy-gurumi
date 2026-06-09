@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito:wght@400;500;600;700;800&display=swap");
 
 :root {
+  color-scheme: light;
   --color-cream: #fff9f1;
   --color-cream-soft: #fff3e7;
   --color-surface: #ffffff;
@@ -21,6 +22,7 @@
 html,
 body {
   min-height: 100%;
+  background: var(--color-cream);
 }
 
 #__next {

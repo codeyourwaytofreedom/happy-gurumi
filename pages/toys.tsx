@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import bucketImage from "@/assets/bucket.png";
 import { BottomBanner } from "@/components/BottomBanner";
@@ -73,6 +74,14 @@ export default function ToysPage() {
       </Head>
       <SiteHeader />
       <main className={styles.allToysPage}>
+        <nav
+          className={`${styles.detailBreadcrumb} ${styles.pageBreadcrumb}`}
+          aria-label="Breadcrumb"
+        >
+          <Link href="/">Home</Link>
+          <span aria-hidden="true">›</span>
+          <span>Toys</span>
+        </nav>
         <section className={styles.allHero} aria-labelledby="all-toys-title">
           <div className={styles.allHeroContent}>
             <h1 id="all-toys-title" className={styles.allHeroTitle}>

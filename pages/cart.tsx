@@ -49,6 +49,14 @@ export default function CartPage() {
       </Head>
       <SiteHeader />
       <main className={styles.cartPage}>
+        <nav
+          className={`${styles.detailBreadcrumb} ${styles.pageBreadcrumb}`}
+          aria-label="Breadcrumb"
+        >
+          <Link href="/">Home</Link>
+          <span aria-hidden="true">›</span>
+          <span>Cart</span>
+        </nav>
         <section className={styles.cartHero} aria-labelledby="cart-title">
           <div className={styles.cartHeroContent}>
             <h1 id="cart-title" className={styles.cartTitle}>

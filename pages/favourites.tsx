@@ -27,6 +27,14 @@ export default function FavouritesPage() {
       </Head>
       <SiteHeader />
       <main className={styles.favouritesPage}>
+        <nav
+          className={`${styles.detailBreadcrumb} ${styles.pageBreadcrumb}`}
+          aria-label="Breadcrumb"
+        >
+          <Link href="/">Home</Link>
+          <span aria-hidden="true">›</span>
+          <span>Favourites</span>
+        </nav>
         <section
           className={styles.favouritesHero}
           aria-labelledby="favourites-title"

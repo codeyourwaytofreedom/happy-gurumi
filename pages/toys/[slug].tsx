@@ -44,7 +44,7 @@ export default function ToyDetailPage({ slug }: ToyDetailPageProps) {
           <nav className={styles.detailBreadcrumb} aria-label="Breadcrumb">
             <Link href="/">Home</Link>
             <span aria-hidden="true">›</span>
-            <Link href="/toys">Shop</Link>
+            <Link href="/toys">Toys</Link>
             <span aria-hidden="true">›</span>
             <span>{toy.name}</span>
           </nav>

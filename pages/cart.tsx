@@ -165,9 +165,7 @@ export default function CartPage() {
           </div>
           {cartItems.length > 0 ? (
             <aside className={styles.orderSummary} aria-label="Order summary">
-              <h2>
-                Order Summary <span aria-hidden="true">♡</span>
-              </h2>
+              <h2>Order Summary</h2>
               <div className={styles.summaryLine}>
                 <span>Subtotal ({itemCount} items)</span>
                 <strong>{formatPrice(subtotal)}</strong>

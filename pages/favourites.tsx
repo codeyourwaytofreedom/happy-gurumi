@@ -39,29 +39,23 @@ export default function FavouritesPage() {
           className={styles.favouritesHero}
           aria-labelledby="favourites-title"
         >
-          <Image
-            src={favouritesHero}
-            alt=""
-            className={styles.favouritesHeroImage}
-            priority
-            sizes="(max-width: 860px) 100vw, 1180px"
-          />
           <div className={styles.favouritesHeroContent}>
             <h1 id="favourites-title" className={styles.favouritesTitle}>
               Your Favourites
             </h1>
-            <p className={styles.favouritesCopy}>
-              The cutest friends, saved just for you.
-            </p>
             <Link className={styles.favouritesHeroButton} href="/toys">
               Continue Shopping
               <span aria-hidden="true">›</span>
             </Link>
           </div>
-          <div className={styles.favouritesHeroBadge} aria-hidden="true">
-            <span>✧</span>
-            <strong>Handmade with Love</strong>
-            <span>♥</span>
+          <div className={styles.favouritesHeroImageWrap}>
+            <Image
+              src={favouritesHero}
+              alt=""
+              className={styles.favouritesHeroImage}
+              priority
+              sizes="(max-width: 860px) 92vw, 650px"
+            />
           </div>
         </section>
 
@@ -76,12 +70,6 @@ export default function FavouritesPage() {
                 {favouriteToys.length === 1 ? "item" : "items"}
               </p>
             </div>
-            {favouriteToys.length > 0 ? (
-              <button className={styles.shareWishlistButton} type="button">
-                Share Wishlist
-                <span aria-hidden="true">⌯</span>
-              </button>
-            ) : null}
           </div>
 
           {favouriteToys.length > 0 ? (
